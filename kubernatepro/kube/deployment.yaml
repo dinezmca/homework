@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vanakkamkube
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vanakkamkube
+  template:
+    metadata:
+      labels:
+        app: vanakkamkube
+    spec:
+      containers:
+        - name: app
+          image: dinezmca/vanakkamimage:1
+          ports:
+            - containerPort: 9090
+          imagePullPolicy: Always
+
