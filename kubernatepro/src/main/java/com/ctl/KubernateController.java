@@ -8,6 +8,7 @@ public class KubernateController {
 	
 	@RequestMapping("hi")
 	private String getMessage() {
+		System.out.println("Welcome");
 		return "VANAKKAM KUBERNATE";
 	}
 }
